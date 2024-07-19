@@ -31,7 +31,7 @@ router.post('/login', async function(req, res, next){
       
       res.cookie("jwt", token, {
         httpOnly: true, // Set to true for security
-        // secure: false, // Set to true if using HTTPS
+        secure: true, // Set to true if using HTTPS
         // sameSite: 'Lax' // Helps with CSRF protection
         maxAge: 24 * 60 * 60 * 1000
       });
