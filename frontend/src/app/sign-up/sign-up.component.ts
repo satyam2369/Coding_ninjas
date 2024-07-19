@@ -22,7 +22,7 @@ export class SignUpComponent {
   constructor(private router: Router) {}
 
   onSignUp() {
-    this.http.post("http://localhost:4000/users/createAccount", this.userObj,{ withCredentials: true }).subscribe((res: any) => {
+    this.http.post("https://coding-ninjas.onrender.com/users/createAccount", this.userObj,{ withCredentials: true }).subscribe((res: any) => {
       console.log(res);
       this.router.navigate(['/login']); 
     });
