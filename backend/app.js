@@ -10,7 +10,9 @@ var usersRouter = require('./routes/users');
 var taskRouter = require('./routes/task')
 var app = express();
 const cors = require("cors")
-const corsOptions = { // Your frontend URL
+const corsOptions = {
+  
+  origin: true,// Your frontend URL
   credentials: true, // Enable sending of cookies
 };
 app.use(cors(corsOptions));
