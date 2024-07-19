@@ -1,5 +1,5 @@
 var express = require('express');
-const user = require('../Models/users');
+const user = require('../models/user');
 const { createToken, getDataFromToken } = require('../service/userService');
 var router = express.Router();
 
