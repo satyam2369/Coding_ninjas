@@ -21,7 +21,7 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   onLogIn() {
-    this.http.post("http://localhost:4000/users/login", this.userObj, { withCredentials: true }).subscribe((res: any) => {
+    this.http.post("https://coding-ninjas.onrender.com/users/login", this.userObj, { withCredentials: true }).subscribe((res: any) => {
       console.log(res + "done hogya bhai");
       this.router.navigate(['/']); 
     });
