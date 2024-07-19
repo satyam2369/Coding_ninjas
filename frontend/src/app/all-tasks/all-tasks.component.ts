@@ -22,14 +22,14 @@ export class AllTasksComponent {
   }
 
   getAllTask(){
-    this.http.get("http://localhost:4000/task/allTasks",{ withCredentials: true }).subscribe((res:any) => {
+    this.http.get("https://coding-ninjas.onrender.com/task/allTasks",{ withCredentials: true }).subscribe((res:any) => {
       this.allTasks = res;
       console.log(res);
     })
   }
 
   checkLogin() {
-    this.http.get("http://localhost:4000/users/checkLogin",{ withCredentials: true }).subscribe((res: any) => {
+    this.http.get("https://coding-ninjas.onrender.com/users/checkLogin",{ withCredentials: true }).subscribe((res: any) => {
       this.user = res;
       console.log("ye user");
       console.log(res);
