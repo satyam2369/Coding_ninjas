@@ -11,7 +11,7 @@ var taskRouter = require('./routes/task')
 var app = express();
 const cors = require("cors")
 const corsOptions = {
-  origin: 'https://codingninjas-proj.netlify.app/', // Your frontend URL
+  origin: 'https://codingninjas-proj.netlify.app/','https://coding-ninjas.onrender.com/login', // Your frontend URL
   credentials: true, // Enable sending of cookies
 };
 app.use(cors(corsOptions));
