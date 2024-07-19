@@ -23,7 +23,7 @@ export class TaskFormComponent {
   constructor(private router: Router) {}
 
   onSubmit() {
-    this.http.post("http://localhost:4000/task/upload_task", this.taskObj,{ withCredentials: true }).subscribe((res: any) => {
+    this.http.post("https://coding-ninjas.onrender.com/task/upload_task", this.taskObj,{ withCredentials: true }).subscribe((res: any) => {
       console.log(res);
       this.router.navigate(['/']); 
     });
