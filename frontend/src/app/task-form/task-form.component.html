@@ -1,0 +1,22 @@
+
+<div class="taskMain">
+<form class="task-form">
+    <label for="taskTitle">Title</label>
+    <input type="text" [(ngModel)]="taskObj.title" id="taskTitle" name="taskTitle" required>
+
+    <label for="taskDescription">Description</label>
+    <textarea id="taskDescription" [(ngModel)]="taskObj.des" name="taskDescription" required></textarea>
+
+    <label for="taskDate">Due Date</label>
+    <input type="date" id="taskDate" name="taskDate" required>
+
+    <label for="taskPriority"  >Priority</label>
+    <select id="taskPriority" [(ngModel)]="taskObj.priority" name="taskPriority" required>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+    </select>
+
+    <button type="submit" class="submit-task" (click) = "onSubmit()">Submit</button>
+</form>
+</div>

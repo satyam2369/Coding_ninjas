@@ -1,0 +1,7 @@
+<p>my-component works!</p>
+<h1>NAME: {{name}} <br/> Status: {{status}} <br/> Salary: {{salary}}</h1>
+<button [disabled] = "isDisabled">Click Me</button>
+
+
+<h1>Input value - {{isInput}}</h1>
+<input type="text" [value]="isInput" (input)="onChange($event)">

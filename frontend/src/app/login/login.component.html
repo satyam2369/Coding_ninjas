@@ -1,0 +1,14 @@
+<div class="loginMain">
+<div class="login-container">
+    <form class="login-form">
+        <h2>Login</h2>
+        <label for="email" >Email</label>
+        <input type="text" [(ngModel)]="userObj.email" id="username" name="username" required>
+        
+        <label for="password">Password</label>
+        <input type="password" type="text" [(ngModel)]="userObj.Password" id="password" name="password" required>
+        
+        <button type="submit" (click) = "onLogIn()" class="submit-login">Login</button>
+    </form>
+</div>
+</div>

@@ -1,0 +1,34 @@
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="#" class="navbar-logo">Task Manager</a>
+        <ul class="navbar-menu">
+            <li><a routerLink="/" routerLinkActive="active" class="navbar-item">Home</a></li>
+            <li><a class="navbar-item">About</a></li>
+            <li><a href="#" class="navbar-item">Contact</a></li>
+            <li *ngIf="!user"><a routerLink="login" routerLinkActive="active" class="btn-login">Login</a></li>
+      <li *ngIf="!user"><a routerLink="signup" routerLinkActive="active" class="btn-signup">SignUp</a></li>
+      <li *ngIf="user"><span class="navbar-item">Welcome, {{ user.username }}</span></li>
+        </ul>
+    </div>
+</nav>
+<div class="Title-addtask">
+<h1 class="Title">All Tasks</h1>
+
+<button class="add-task"><a class="addtaskLink" routerLink="addtask" routerLinkActive="active">Add Task  </a></button>
+</div>
+
+<div class="Tasks">
+    @for(task of allTasks; track task._id) {
+        <div class="task">
+            <h3 class="taskTitle">{{task.title}}</h3>
+            <p class="taskDis">{{task.des}}</p>
+            <p class="taskDate">{{task.date}}</p>
+            <div class="last">
+                <p class="taskPriority {{task.priority}}">{{task.priority}}</p>
+                <button class="start">Start</button>
+                <button class="done">Done</button>
+            </div>
+        </div>
+    }
+</div>
+<!-- {{getAllTask()}} -->

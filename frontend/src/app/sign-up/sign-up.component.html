@@ -1,0 +1,19 @@
+
+<div class="signupMain">
+<form class="signup-form">
+    <h2>Sign Up</h2>
+    <label for="username">Username</label>
+    <input type="text" [(ngModel)]="userObj.name" id="username" name="username" required>
+    
+    <label for="email">Email</label>
+    <input type="email" id="email"  [(ngModel)]="userObj.email"  name="email" required>
+    
+    <label for="password">Password</label>
+    <input type="password" id="password"  [(ngModel)]="userObj.Password"  name="password" required>
+    
+    <label for="confirmPassword">Confirm Password</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+    
+    <button type="submit" (click) = "onSignUp()"  class="submit-signup">Sign Up</button>
+</form>
+</div>
