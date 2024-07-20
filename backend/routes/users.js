@@ -30,7 +30,7 @@ router.post('/login', async function(req, res, next){
       console.log(token);
       
       res.cookie("jwt", token, {
-        httpOnly: true, // Set to true for security
+        httpOnly: false, // Set to true for security
         secure: true,
         expires: new Date(Date.now() + 900000),
         domain: ".codingninjas-proj.netlify.app"
