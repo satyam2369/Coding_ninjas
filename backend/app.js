@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 var taskRouter = require('./routes/task')
 var app = express();
 
-app.set("trust proxy" , 1);
+// app.set("trust proxy" , 1);
 const cors = require("cors")
 const corsOptions = {
   
