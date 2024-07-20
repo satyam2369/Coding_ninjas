@@ -14,7 +14,7 @@ app.set("trust proxy" , 1);
 const cors = require("cors")
 const corsOptions = {
   
-  origin: true,// Your frontend URL
+  origin: '*',// Your frontend URL
   credentials: true, // Enable sending of cookies
 };
 app.use(cors(corsOptions));
