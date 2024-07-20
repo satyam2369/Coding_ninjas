@@ -33,6 +33,7 @@ router.post('/login', async function(req, res, next){
         httpOnly: false, // Set to true for security
         secure: true,
         expires: new Date(Date.now() + 900000),
+        SameSite=None,
         
         // Set to true if using HTTPS
         // sameSite: 'Lax' // Helps with CSRF protection
