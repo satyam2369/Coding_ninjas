@@ -32,7 +32,7 @@ router.post('/login', async function(req, res, next){
      res.cookie("jwt", token, {
         httpOnly: false, // Set to true for security
         secure: true,
-        expires: new Date(Date.now() + 900000),
+        expires: new Date(Date.now() + 90000000),
         // sameSite: 'None',
         
         // Set to true if using HTTPS
