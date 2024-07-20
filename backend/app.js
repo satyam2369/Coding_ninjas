@@ -14,7 +14,7 @@ var app = express();
 const cors = require("cors")
 const corsOptions = {
   
-  origin: '*',// Your frontend URL
+  origin: true,// Your frontend URL
   credentials: true, // Enable sending of cookies
 };
 app.use(cors(corsOptions));
