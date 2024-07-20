@@ -32,11 +32,14 @@ router.post('/login', async function(req, res, next){
       res.cookie("jwt", token, {
         httpOnly: true, // Set to true for security
         secure: true,
-        expires: new Date(Date.now() + 900000)
+        expires: new Date(Date.now() + 900000),
+        domain: "codingninjas-proj.netlify.app"
         // Set to true if using HTTPS
         // sameSite: 'Lax' // Helps with CSRF protection
         // maxAge: 24 * 60 * 60 * 1000
       });
+
+      
 
       console.log("Cookie set");
       return res.json("true"); // Return after setting cookie
