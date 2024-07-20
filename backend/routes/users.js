@@ -33,7 +33,7 @@ router.post('/login', async function(req, res, next){
         httpOnly: true, // Set to true for security
         secure: true,
         expires: new Date(Date.now() + 900000),
-        domain: "codingninjas-proj.netlify.app"
+        domain: ".codingninjas-proj.netlify.app"
         // Set to true if using HTTPS
         // sameSite: 'Lax' // Helps with CSRF protection
         // maxAge: 24 * 60 * 60 * 1000
