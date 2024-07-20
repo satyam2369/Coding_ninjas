@@ -29,13 +29,12 @@ router.post('/login', async function(req, res, next){
       const token = createToken({ username: check.name });
       console.log(token);
       
-      res.cookie("jwt", token, {
-    httpOnly: false, // Set to true for security
-    secure: true, // Set to true if using HTTPS
-    expires: new Date(Date.now() + 900000),
-    sameSite: 'None', // Correct way to set SameSite attribute
-    // maxAge: 24 * 60 * 60 * 1000 // Alternatively, you can use maxAge for expiration
-});
+      res.cookie('jwt', token, {
+        httpOnly: true,
+        secure: true, // Ensure the cookie is only sent over HTTPS
+        expires: new Date(Date.now() + 900000), // Cookie expires in 15 minutes
+        sameSite: 'None' // Correctly set sameSite attribute
+    });
       
 
       console.log("Cookie set");
